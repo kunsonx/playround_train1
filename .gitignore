@@ -3,6 +3,7 @@ __pycache__/
 logs/
 bin/
 pyvenv.cfg
+share/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
