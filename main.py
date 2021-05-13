@@ -18,7 +18,7 @@ import collections
 from tensorflow import keras
 from tensorflow.keras import layers
 
-tf.compat.v1.disable_eager_execution()
+# tf.compat.v1.disable_eager_execution()
 
 print(f"eagerly? {tf.executing_eagerly()}")
 print(tf.config.list_logical_devices())
