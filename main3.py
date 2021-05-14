@@ -36,12 +36,22 @@ ratings = tfds.load('movielens/100k-ratings', split="train")
 # Features of all the available movies.
 movies = tfds.load('movielens/100k-movies', split="train")
 
+x = tfds.as_dataframe(ratings)
+y = tfds.as_dataframe(movies)
+print(x)
+print(y)
+
 # Select the basic features.
 ratings = ratings.map(lambda x: {
     "movie_id": tf.strings.to_number(x["movie_id"]),
     "user_id": tf.strings.to_number(x["user_id"])
 })
 movies = movies.map(lambda x: tf.strings.to_number(x["movie_id"]))
+
+x = tfds.as_dataframe(ratings)
+y = tfds.as_dataframe(movies)
+print(x)
+print(y)
 
 
 # Build a model.
